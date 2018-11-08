@@ -1,0 +1,29 @@
+pip install Django==1.11.9
+When installing Django 1.11.9, it loads with pytz, which is the Olson tz database. This platform implements accurate cross platform timezone calculations. It also remedies an issue with ambiguous times at the end of daylight saving time.
+
+pip list
+Executing this command lists installed packages, including editables. The packages are listed in a case-insensitive sorted order. For my local machine, I show the following: Django, pip, pytz, setuptools and wheel.
+
+deactivate
+Simply deactivates your virtual environment.
+
+pip3 list
+This distinction specifically targets the pip within Python3, as opposed to versions in Python 2. There appears to be an active push online to just merge the two commands, as it seems unnecessary to have two for the same purposes. Executing this command on my local machine yielded: pip, setuptools and virtualenv only, as my virtual environment session was terminated.
+
+source py3env/scripts/activate
+This command, for my OS and the use of Git Bash, activates my virtual environment that I am running off my desktop folder of all my Coding Dojo work. There are several variations to activate your virtual environment, based off of your system and what tool you use to access the terminal/command prompt.
+
+pip install Django==1.11.9
+Running this line in Git Bash informs me that the installation requirement has already been met. It references the two possible installs based off this command and shows where they are installed on my system.
+
+pip freeze
+Utilizing this command outputs the installed packages in requirement format, as opposed to the total packages. Version numbers are shown on both outputs, but the freeze variation is a much shorter list as. Running this on my system gives me: Django==1.11.9 and pytz==2018.5.
+
+pip uninstall Django
+Using this command finds the version of Django I have on my system and all files associated with it, preps it for deletion and confirms with a y/n prompt before executing. Running this on my machine caused it to remove four files, confirm I wanted to proceed and then follow up that it successfully deleted Django.
+
+pip show Django
+This command normally would show information about one or more installed packages. However, as we just uninstalled Django from our system, there is nothing for the command to output.
+
+pip search Flask
+Utilizing the "search" command will find all PyPi packages whose name or summary contains your query. In this instancce, I searched for Flask, which output a variety of files, version numbers, descriptions and possible extensions -  also with version numbers and descriptions.
