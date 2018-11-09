@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dojo_fruit_store.css') }}">
+    <title>Dojo Fruit Store</title>    
+</head>
+    <body>
+        <div id="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Dojo Fruit Store</h1>
+                <p class="lead">Welcome to your local Coding Dojo's online Fruit Store!</p>
+                <hr class="my-4">
+                <p>In an effort to ensure our cohorts are well-nurished to tackle the countless hours of keyboard clicking needed to develop the foundation of a solid software developer, Dojo Fruit Store is being introduced! Check out are vast variety of fruits to choose from and place your order today!</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn More!</a>
+            </div>
+            <div id="leftpanel">
+                <h3>Pick your fruits:</h3>
+                <form id="dojo_fruit_store" action='/checkout' method="POST">
+                    <div id="fruits" class="form-group">
+                        <label for="apples">Apples:</label>
+                        <select class="form-control" id="apples" form="dojo_fruit_store" name="apples">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="oranges">Oranges:</label>
+                        <select class="form-control" id="oranges" form="dojo_fruit_store" name="oranges">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="bananas">Bananas:</label>
+                        <select class="form-control" id="bananas" form="dojo_fruit_store" name="bananas">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="pears">Pears:</label>
+                        <select class="form-control" id="pears" form="dojo_fruit_store" name="pears">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="plums">Plums:</label>
+                        <select class="form-control" id="plums" form="dojo_fruit_store" name="plums">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="grapes">Grapes:</label>
+                        <select class="form-control" id="grapes" form="dojo_fruit_store" name="grapes">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="watermelons">Watermelons:</label>
+                        <select class="form-control" id="watermelons" form="dojo_fruit_store" name="watermelons">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="strawberries">Strawberries:</label>
+                        <select class="form-control" id="strawberries" form="dojo_fruit_store" name="strawberries">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="cherries">Cherries:</label>
+                        <select class="form-control" id="cherries" form="dojo_fruit_store" name="cherries">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div id="fruits" class="form-group">
+                        <label for="peaches">Peaches:</label>
+                        <select class="form-control" id="peaches" form="dojo_fruit_store" name="peaches">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <h3>Your Information:</h3>
+                    <div id="personal" class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="studentid">Student ID</label>
+                            <input type="text" class="form-control" id="studentid" name="studentid" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="dojo">Dojo</label>
+                            <input type="text" class="form-control" id="dojo" name="dojo" required>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                            <p class="terms">By accessing or using the Dojo Fruit Store website, the online order service, or any applicable (including mobile application) made available by Dojo Fruit Store (together, the "Service"), however accessed, you agree to be bound by these terms of use("Terms of Use"). The service is owned or controlled by Coding Dojo, LLC ("Dojo Fruit Store"). <span>These Terms of Use affect your legal right and obligations. If you do not agree to be bound by all these Terms of Use, do not access or use the Service.</span></p>
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                            <label class="form-check-label" for="invalidCheck2">
+                                Agree to terms and conditions
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Place My Order!</button>             
+                </form>
+            </div>
+            <div id="rightpanel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="static/apples.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="static/bananas.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="static/oranges.jpg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="static/pears.jpg" alt="Fourth slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="static/plums.jpg" alt="Fifth slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dojo_fruit_store.css') }}">
+    <title>Dojo Fruit Store</title>    
+</head>
+    <body>
+        <div id="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Thank you!</h1>
+                <p class="lead">Your order has been received and is being processed immediately!</p>
+                <hr class="my-4">
+                <p>Please be sure to help spread the word and inform your cohort about the great variety at the Dojo Fruit Store.</p>
+            </div>
+            <div id="leftpanel2">
+                <h2>Receipt for {{name}}</h2>
+                <h5>Apples: {{apples}}</h5>
+                <h5>Oranges: {{oranges}}</h5>
+                <h5>Bananas: {{bananas}}</h5>
+                <h5>Pears: {{pears}}</h5>
+                <h5>Plums: {{plums}}</h5>
+                <h5>Grapes: {{grapes}}</h5>
+                <h5>Watermelons: {{watermelons}}</h5>
+                <h5>Strawberries: {{strawberries}}</h5>
+                <h5>Cherries: {{cherries}}</h5>
+                <h5>Peaches: {{peaches}}</h5>
+                <h5 id="total">Total: {{apples + oranges + bananas + pears + plums + grapes + watermelons + strawberries + cherries + peaches}}</h5>
+                <h4 class="confirmation">Student credentials verified!</h4>
+                <h4 class="confirmation">Purchase made on Student ID {{studentid}}, for {{name}} at </h4>
+                <h4 class="confirmation">{{timestamp}}.</h4>
+            </div>
+            <div id="rightpanel2"></div>
+        </div>
+    </body>
+</html>

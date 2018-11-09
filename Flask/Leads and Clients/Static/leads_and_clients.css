@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+
+}
+p {
+    margin: 0;
+    font-weight: bold;
+    color: white;
+}
+#container {
+    width: 1400px;
+    height: 875px;
+    margin: 5px auto;
+    padding-top: 10px;
+    background-color: #514F50
+
+}
+#banner {
+    display: block;
+    width: 1375px;
+    height: 200px;
+    margin: 10px;
+}
+#custname {
+    display: inline-block;
+    width: 300px;
+    height: 500px;
+    margin: 15px;
+    text-align: center;
+    background-color: #1AA9E3;
+}
+#numleads {
+    display: inline-block;
+    width: 300px;
+    height: 500px;
+    margin: 15px;
+    text-align: center;
+    background-color: #1AA9E3;
+}
+#list {
+    display: inline-block;
+    vertical-align: top;
+    width: 675px;
+    height: 600px;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+}
+#chart {
+    display: inline-block;
+    width: 675px;
+    height: 600px;
+    margin: 10px;
+    background-color: white;
+}

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #514F50;
+}
+label {
+    font-weight: bold;
+}
+h1 {
+    font-weight: bold;
+    font-size: 64px;
+}
+h2 {
+    margin-left: 15px;
+    margin-top: 5px;
+    color: white;
+    text-shadow: 3px 3px 2px #000000;
+}
+#container {
+    width: 1400px;
+    height: 800px;
+    margin: 35px auto;
+    background-color: #08A9E2;
+}
+#container2 {
+    width: 1400px;
+    height: 800px;
+    margin: 35px auto;
+    text-align: center;
+    background-color: #08A9E2;
+}
+#banner {
+    text-align: center;
+}
+#login {
+    display: inline-block;
+    vertical-align: top;
+    width: 696px;
+    height: 790px;
+}
+#registration {
+    display: inline-block;
+    width: 696px;
+    height: 790px;
+}
+#winpic {
+    display: block;
+    height: 40%;
+    margin: 0 auto;
+}
+#signout {
+    float: right;
+    font-weight: bold;
+    margin: 15px;
+    padding: 5px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 8px 8px 9px -2px #000000; 
+    box-shadow: 0px 10px 13px -7px #000000, 8px 8px 9px -2px #000000;
+}
+.error {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: red;
+}
+.success {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: green;
+}
+.btn {
+    font-weight: bold;
+    margin: 15px;
+    padding: 5px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 8px 8px 9px -2px #000000; 
+    box-shadow: 0px 10px 13px -7px #000000, 8px 8px 9px -2px #000000;
+}
+.welcome {
+    font-size: 105px;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 2px #000000;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login_and_registration.css') }}">
+        <title>Login and Registration</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="banner">
+                <h1>Login and Registration</h1>
+            </div>
+            <div id="registration">
+                <form action="/register" method="post">
+                    <h2>Register here!</h2>
+                    <div class="col-md-12 mb-1">
+                        <label for="regfirstname">First name</label>
+                        {% with errors = get_flashed_messages(category_filter=["first_name"]) %}
+                        <input type="text" class="form-control {{ msg }}" id="regfirstname" name="first_name">
+                        {% endwith %}
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-1">
+                        <label for="reglastname">Last name</label>
+                        <input type="text" class="form-control" id="reglastname" name="last_name">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-1">
+                        <label for="regemail">Email</label>
+                        <input type="text" class="form-control" id="regemail" name="email">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-1">
+                        <label for="regpassword">Password</label>
+                        <input type="text" class="form-control" id="regpassword" name="password">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-1">
+                        <label for="regconfpw">Confirm Password</label>
+                        <input type="text" class="form-control" id="regconfpw" name="confirm_password">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <input class="btn" type="submit" value="Register">
+                </form>
+                {% with errors = get_flashed_messages(category_filter=["first_name"]) %}
+                    {% if errors %}
+                        {% for msg in errors %}
+                            <p class="error">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% with errors = get_flashed_messages(category_filter=["last_name"]) %}
+                    {% if errors %}
+                        {% for msg in errors %}
+                            <p class="error">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% with errors = get_flashed_messages(category_filter=["email"]) %}
+                    {% if errors %}
+                        {% for msg in errors %}
+                            <p class="error">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% with errors = get_flashed_messages(category_filter=["duplicate"]) %}
+                    {% if errors %}
+                        {% for msg in errors %}
+                            <p class="error">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% with errors = get_flashed_messages(category_filter=["password"]) %}
+                    {% if errors %}
+                        {% for msg in errors %}
+                            <p class="error">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% with errors = get_flashed_messages(category_filter=["confirm_password"]) %}
+                    {% if errors %}
+                        {% for msg in errors %}
+                            <p class="error">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% with errors = get_flashed_messages(category_filter=["success"]) %}
+                    {% if errors %}
+                        {% for msg in errors %}
+                            <p class="success">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}  
+            </div>
+            <div id="login">
+                <form action="/login" method="post">
+                    <h2>Login here!</h2>
+                    <div class="col-md-12 mb-1">
+                        <label for="logemail">Email</label>
+                        <input type="text" class="form-control" id="logemail" name="email">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-1">
+                        <label for="logpassword">Password</label>
+                        <input type="text" class="form-control" id="logpassword" name="password">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <input class="btn" type="submit" value="Login">
+                    {% with errors = get_flashed_messages(category_filter=["nologin"]) %}
+                        {% if errors %}
+                            {% for msg in errors %}
+                                <p class="error">{{ msg }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </form>  
+            </div>
+        </div>
+    </body>
+</html>

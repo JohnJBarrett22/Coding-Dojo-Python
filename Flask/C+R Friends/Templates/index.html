@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='c+r_friends.css') }}">
+    <title>C+R Friends</title>
+</head>
+    <body>
+        <div id="container">
+            <div id="addfriend">
+                <h1>Add a friend:</h1>
+                <form action="/add" method="post">
+                    <input class="input" type="text" placeholder="First Name" name="first_name">
+                    <input class="input" type="text" placeholder="Last Name" name="last_name">
+                    <input class="input" type="text" placeholder="Occupation" name="occupation">
+                    <input class="button" type="submit" value="Add">
+                </form>
+            </div>
+            <div id="myfriends">
+                <h1>These are my friends!</h1>
+                <div id="firstname">
+                    <h2>First Name</h2>
+                    {% for friend in friends %}
+                        <p>{{ friend.first_name }}</p>
+                    {% endfor %}
+                </div>
+                <div id="lastname">
+                    <h2>Last Name</h2>
+                    {% for friend in friends %}
+                        <p>{{ friend.last_name }}</p>
+                    {% endfor %}
+                </div>
+                <div id="occupation">
+                    <h2>Occupation</h2>
+                    {% for friend in friends %}
+                        <p>{{ friend.occupation }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+</body>
+</html>

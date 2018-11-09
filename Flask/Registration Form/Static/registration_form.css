@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: radial-gradient(circle, #514F50 30%, #08A9E2 75%, white 95%);
+    
+}
+h1 {
+    text-align: center;
+    font-size: 52px;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 3px 3px 2px #08A9E2;   
+}
+placeholder {
+    font-weight: bold;
+}
+#logo {
+    margin: 0 auto;
+    text-align: center;
+}
+#container {
+    width: 600px;
+    height: 700px;
+    margin: 65px auto;
+    text-align: center;
+    background-color: #514F50;
+}
+.input {
+    display: block;
+    width: 450px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 15px auto;
+}
+.button {
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.first_name {
+    position: absolute;
+    left: 1045px;
+    top: 150px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px red;
+}
+.last_name {
+    position: absolute;
+    left: 1045px;
+    top: 203px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px red;
+}
+.email {
+    position: absolute;
+    left: 1045px;
+    top: 258px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px red;
+}
+.password {
+    position: absolute;
+    left: 1045px;
+    top: 312px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px red;
+}
+.confirm_password {
+    position: absolute;
+    left: 1045px;
+    top: 366px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px red;
+}
+.success {
+    position: absolute;
+    left: 400px;
+    top: 786px;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px green;
+}

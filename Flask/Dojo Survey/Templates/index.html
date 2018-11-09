@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dojo_survey.css') }}">
+    <title>Dojo Survey</title>
+    </head>
+    <body>
+        <div id="container">
+            <form id="dojoform" action='/result' method='post'>
+                <div class="form-group">
+                    <label for="Input1">Your Name:</label>
+                    <input type="text" name="name" class="form-control" id="Input1">
+                </div>
+                <div class="form-group">
+                    <label for="Select1">Dojo Location:</label>
+                    <select multiple class="form-control" id="Select1" name="location" form="dojoform" required>
+                        <option value="Chicago">Chicago</option>
+                        <option value="East Bay">East Bay</option>
+                        <option value="Dallas">Dallas</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="San Jose">San Jose</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Tulsa">Tulsa</option>
+                        <option value="Tysons Corner">Tysons Corner</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Select2">Favorite Language:</label>
+                    <select multiple class="form-control" id="Select2" name="language" form="dojoform" required>
+                        <option value="C++">C++</option>
+                        <option value="C3">C#</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Perl">Perl</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="Rust">Rust</option>
+                        <option value="Swift">Swift</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Textarea1">Comments (optional):</label>
+                    <textarea class="form-control" name="comment" form="dojoform" id="Textarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" id ="button" class="btn btn-light">Submit</button>      
+            </form>
+        </div>
+    </body>
+</html>

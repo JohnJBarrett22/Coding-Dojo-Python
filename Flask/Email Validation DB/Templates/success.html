@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='email_validation_db.css') }}">
+        <title>Email Validation with DB</title>
+    </head>
+    <body>
+        <div id="container2">
+            <div id="success">
+                <h1 id="grn">{{ session.email }}</h1>
+                <h1 id="grn"> is a valid Email address! Thank you!</h1>
+            </div>
+            <div>
+                <h1 id="grn">Current Registrants...</h1>
+                <div id="email">
+                    <h1>Email</h1>
+                    {% for email in users %}
+                        <p>{{ email.email }}</p>
+                    {% endfor %}
+                </div>
+                <div id="time">
+                    <h1>Created</h1>
+                    {% for time in users %}
+                        <p>{{ time.time }}</p>
+                    {% endfor %}
+                </div>
+                <div id="delete">
+                    <h1>Delete</h1>
+                    {% for id in users %}
+                        <a href="/delete/{{ id.idusers }}"><button id="delbutton">Delete</button></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

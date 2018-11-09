@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+h1 {
+    font-size: 46px;
+    padding-top: 235px;    
+}
+h2 {
+    font-size: 42px;
+    color: orange;
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #009AC7;
+}
+#container {
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+    text-align: center;
+    background-image: radial-gradient(circle, white, grey, black 65%);
+}

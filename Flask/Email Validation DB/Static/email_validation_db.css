@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+h4 {
+    color: white;
+}
+p {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 9px;
+}
+a {
+    text-decoration: none;
+}
+#container {
+    width: 600px;
+    height: 620px;
+    margin: 25px auto;
+    padding-top: 25px;
+    text-align: center;
+    background-color: #514F50;
+}
+#container2 {
+    width: 1400px;
+    height: 800px;
+    margin: 25px auto;
+    padding-top: 25px;
+    text-align: center;
+    background-color: #514F50;
+}
+#entry {
+    width: 400px;
+    height: 400px;
+    margin: 25px auto;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #08A9E2;
+}
+#error {
+    width: 375px;
+    height: 85px;
+    text-align: center;
+    margin: 7px auto;
+    padding-top: 30px;
+    color: white;
+    background-color: red;
+}
+#errormsg {
+    font-size: 42px;
+}
+#success {
+    width: 1300px;
+    height: 110px;
+    margin: 0 auto;
+    padding-top: 35px;
+    background-color: green;
+}
+#grn {
+    color: white;
+}
+#email {
+    display: inline-block;
+    vertical-align: top;
+    width: 720px;
+    height: 575px;
+    background-image: linear-gradient(to right, #08A9E2, white,#08A9E2);
+}
+#time {
+    display: inline-block;
+    vertical-align: top;
+    width: 420px;
+    height: 575px;
+    background-image: linear-gradient(to right, #08A9E2, white,#08A9E2);
+}
+#delete {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    height: 575px;
+    background-image: linear-gradient(to right, #08A9E2, white,#08A9E2);
+}
+#delbutton{
+    display: block;
+    text-align: center;
+    margin: 10px 0 11px 52px;
+}
+.form {
+    display: block;
+    margin: 15px auto;
+}

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.terms {
+    font-size: 10px;
+}
+span {
+    font-weight: bold;
+}
+#container {
+    width: 88%;
+    margin: 0 auto;
+}
+#leftpanel {
+    display: inline-block;
+    vertical-align: top;
+    height: 600px;
+    width: 700px;
+    padding: 10px;
+}
+#rightpanel {
+    display: inline-block;
+    height: 600px;
+    width: 700px;
+    padding: 10px;
+}
+#leftpanel2 {
+    display: inline-block;
+    vertical-align: top;
+    height: 600px;
+    width: 700px;
+    padding: 10px;
+}
+#rightpanel2 {
+    display: inline-block;
+    height: 600px;
+    width: 700px;
+    padding: 10px;
+    background-image: url('fruit.jpg')
+}
+#fruits {
+    display: inline-block;
+    margin: 0px 10px 25px 10px;
+    width: 100px;
+}
+#personal {
+    margin: 10px;
+}
+#total {
+    font-weight: bold;
+    color: orange;
+}
+.confirmation {
+    font-weight: bold;
+    color: green;
+}
