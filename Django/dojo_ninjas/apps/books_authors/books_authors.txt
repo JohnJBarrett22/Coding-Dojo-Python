@@ -1,0 +1,69 @@
+1.) Create 5 books with the following names: C sharp, Java, Python, PHP, Ruby
+    Book.objects.create(name="C Sharp", desc = "Programming language for all you C Sharp people!")
+    Book.objects.create(name="Java", desc = "Not your Momma's cup of coffee!")
+    Book.objects.create(name="Python", desc = "It's just snakes in your boot that you need to look out for.")
+    Book.objects.create(name="PHP", desc = "Stands for something scrary!")
+    Book.objects.create(name="Ruby", desc = "Could be nice and shiny, but who knows since we don't learn that here!")
+
+2.) Create 5 different authors: Mike, Speros, John, Jadee, Jay
+    Author.objects.create(first_name="Mike", last_name="Ike", email="tasteslikechicken@gmail.com")
+    Author.objects.create(first_name="Speros", last_name="Globos", email="Spherosglobos@gmail.com")
+    Author.objects.create(first_name="John", last_name="Barrett", email="Johnjbarrett22@gmail.com")
+    Author.objects.create(first_name="Jadee", last_name="Seashores", email="Jadesea@gmail.com")
+    Author.objects.create(first_name="Jay", last_name="Zeee", email="Jayeatsbabies@gmail.com")
+
+3.) Add a new field in the authors table called 'notes'.  Make this a TextField.  Successfully create and run the migration files.
+    notes = models.TextField()
+
+5.) Change the name of the 5th book to C#
+    b=Book.objects.get(id=5)
+    b.name = "C#"
+    b.save()
+
+6.) Change the first_name of the 5th author to Ketul
+    a=Author.objects.get(id=5)
+    a.first_name = "Ketul"
+    a.save()
+
+7.) Assign the first author to the first 2 books
+    a=Author.objects.get(id=1)
+    Book.objects.get(id=1).written_by.add(a)
+    Book.objects.get(id=2).written_by.add(a)
+
+8.) Assign the second author to the first 3 books
+    b = Author.objects.get(id=2)
+    Book.objects.get(id=1).written_by.add(b)
+    Book.objects.get(id=2).written_by.add(b)
+    Book.objects.get(id=3).written_by.add(b)
+
+9.) Assign the third author to the first 4 books
+    c = Author.objects.get(id=3)
+    Book.objects.get(id=1).written_by.add(c)
+    Book.objects.get(id=2).written_by.add(c)
+    Book.objects.get(id=3).written_by.add(c)
+    Book.objects.get(id=4).written_by.add(c)
+
+10.) Assign the fourth author to the first 5 books (or in other words, all the books)
+    d = Author.objects.get(id=4)
+    Book.objects.get(id=1).written_by.add(d)
+    Book.objects.get(id=2).written_by.add(d)
+    Book.objects.get(id=3).written_by.add(d)
+    Book.objects.get(id=4).written_by.add(d)
+    Book.objects.get(id=5).written_by.add(d)
+
+11.) For the 3rd book, retrieve all the authors
+    Book.objects.get(id=3).written_by.all()
+
+12.) For the 3rd book, remove the first author
+    a = Author.objects.get(id=2)
+    Book.objects.get(id=3).written_by.remove(a)
+
+13.) For the 2nd book, add the 5th author as one of the authors
+    a = Author.objects.get(id=5)
+    Book.objects.get(id=2).written_by.add(a)
+
+14.) Find all the books that the 3rd author is part of
+    Author.objects.get(id=3).books_written.all()
+
+15.) Find all the books that the 2nd author is part of
+    Author.objects.get(id=2).books_written.all()

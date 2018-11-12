@@ -1,0 +1,49 @@
+1.) Create 3 different user accounts
+    User.objects.create(first_name="Isabeli", last_name="Shimada", email="ItakeLs@gmail.com")
+    User.objects.create(first_name="Marcus", last_name="Nash", email="Nashskillsacademy@gmail.com")
+    User.objects.create(first_name="Suge", last_name="Knight", email="Sugarsnaps@gmail.com")
+
+2.) Have the first user create/upload 2 books.
+    u = User.objects.get(id=1)
+    Book.objects.create(name="Art of War", desc="Definitely not about art.", uploaded_by_id=u)
+    Book.objects.create(name="Hokey Pokey", desc="Turn yourself around!", uploaded_by_id=u)
+
+3.) Have the second user create/upload 2 other books.
+    v = User.objects.get(id=2)
+    Book.objects.create(name="Coding Dojo", desc="A cautionary tale!", uploaded_by_id=v)
+    Book.objects.create(name="Captain Crunch", desc="Yummy!", uploaded_by_id=v)
+
+4.) Have the third user create/upload 2 other books.
+    w = User.objects.get(id=3)
+    Book.objects.create(name="Crunchy Cat Snacks", desc="Meow Meow Meow!", uploaded_by_id=w)
+    Book.objects.create(name="Bacon Bits", desc="Oink!", uploaded_by_id=w)
+
+5.) Have the first user like the last book and the first book
+    a = User.objects.get(id=1)
+    Book.objects.get(id=1).liked_by.add(a)
+
+6.) Have the second user like the first book and the third book
+    a = User.objects.get(id=1)
+    Book.objects.get(id=1).liked_by.add(a)
+    Book.objects.get(id=3).liked_by.add(a)
+
+7.) Have the third user like all books
+    a = User.objects.get(id=3)
+    Book.objects.get(id=1).liked_by.add(a)
+    Book.objects.get(id=2).liked_by.add(a)
+    Book.objects.get(id=3).liked_by.add(a)
+    Book.objects.get(id=4).liked_by.add(a)
+    Book.objects.get(id=5).liked_by.add(a)
+    Book.objects.get(id=6).liked_by.add(a)
+
+8.) Display all users who like the first book
+    Book.objects.first().liked_by.all()
+
+9.)_ Display the user who uploaded the first book
+    Book.objects.first().uploaded_by_id
+
+10.) Display all users who like the second book
+    Book.objects.get(id=2).liked_by.all()
+
+11.) Display the user who uploaded the second book
+    Book.objects.get(id=2).uploaded_by_id
