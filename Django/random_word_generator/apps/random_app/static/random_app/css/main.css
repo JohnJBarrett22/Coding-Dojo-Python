@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    background-color: #15AAE2;
+}
+h1 {
+    font-size:102px;
+    margin-top: 40px;
+}
+h2 {
+    font-size: 40px;
+    margin-top: 175px;
+}
+#genbutton {
+    display: block;
+    padding: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+#delbutton {
+    display: block;
+    padding: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    margin: 300px 25px 0 0;
+}
+#random {
+    width: 1000px;
+    height: 200px;
+    margin: 25px auto;
+    background-color: white;
+    border: 3px solid black;
+}

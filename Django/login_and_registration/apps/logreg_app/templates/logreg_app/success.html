@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" type="text/css" href="{% static 'logreg_app/css/main.css' %}">
+    <title>Login and Registration</title>
+</head>
+<body>
+    <h1>Success! Welcome, {{request.session.u_fname}}!</h1>
+    <h2>Successfully registered (or logged in)!</h2>
+</body>
+</html>

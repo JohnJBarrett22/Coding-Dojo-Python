@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" type="text/css" href="{% static 'ninja_app/css/main.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Ninja Gold</title>    
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h2 id="counter">Your Gold: {{request.session.gold_total}}</h2>
+            <a id="link" href="/reset"><h1 id="ninjagold">Ninja Gold</h1></a>
+        </div>
+        <div id="forms">
+            <form class="form" action="/process_money" method="post">
+                {% csrf_token %}
+                <h2 id="location">Farm</h2>
+                <img src="{% static 'ninja_app/images/farm.jpg' %}" alt="Picture of a farm">
+                <h3 id="desc">(earns 10-20 golds)</h3>
+                <input type="hidden" name="building" value="farm">
+                <button type="submit" class="btn btn-warning">Find Gold!</button>
+            </form>
+            <form class="form" action="/process_money" method="post">
+                {% csrf_token %}
+                <h2 id="location">Cave</h2>
+                <img src="{% static 'ninja_app/images/cave.jpg' %}" alt="Picture of a cave">
+                <h3 id="desc">(earns 5-10 golds)</h3>
+                <input type="hidden" name="building" value="cave">
+                <a href='/process_money'><button type="submit" class="btn btn-warning">Find Gold!</button></a>
+            </form>
+            <form class="form" action="/process_money" method="post">
+                {% csrf_token %}
+                <h2 id="location">House</h2>
+                <img src="{% static 'ninja_app/images/house.jpeg' %}" alt="Picture of a house">
+                <h3 id="desc">(earns 2-5 golds)</h3>
+                <input type="hidden" name="building" value="house">
+                <a href='/process_money'><button type="submit" class="btn btn-warning">Find Gold!</button></a>
+            </form>
+            <form class="form" action="/process_money" method="post">
+                {% csrf_token %}
+                <h2 id="location">Casino</h2>
+                <img src="{% static 'ninja_app/images/casino.png' %}" alt="Picture of a casino">
+                <h3 id="desc">(earns/takes 0-50 golds)</h3>
+                <input type="hidden" name="building" value="casino">
+                <a href='/process_money'><button type="submit" class="btn btn-warning">Find Gold!</button></a>
+            </form>
+        </div>
+        <div id="output">
+            {% for msg in request.session.message %}
+                <p class="{{msg.status}}">{{msg.ledger}} {{msg.gold}} golds from the {{msg.building}}! ({{msg.time}}) </p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
