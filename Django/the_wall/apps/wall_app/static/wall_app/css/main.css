@@ -1,0 +1,41 @@
+h1 {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+#portal {
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    height: 800px;
+}
+#errors {
+    display: inline-block;
+    text-align: center;
+    width: 815px;
+    height: 800px;
+    margin: 0 auto;
+    color: red;
+}
+#space {
+    margin-top: 105px;
+}
+.fields {
+    float: right;
+    width: 250px;
+    height: 35px;
+    margin-left: 15px;
+}
+.btn {
+    float: right;
+    font-size: 15px;
+    padding: 15px;
+    color: white;
+    background-color: #597EAA;
+    -webkit-box-shadow: 6px 6px 15px -1px #000000; 
+    box-shadow: 6px 6px 15px -1px #000000;
+}
+.alrght   {
+    text-align: right;
+    font-size: 22px;
+}

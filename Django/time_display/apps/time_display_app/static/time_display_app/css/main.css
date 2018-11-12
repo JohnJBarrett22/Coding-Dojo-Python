@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    background-color: #15AAE2;
+}
+h1 {
+    font-size: 72px;
+}
+#desc {
+    width: 300px;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: white;
+    border: 3px solid black;
+}
+#time {
+    width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border: 3px solid black;
+}

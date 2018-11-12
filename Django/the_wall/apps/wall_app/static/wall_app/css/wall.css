@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+body {
+    background-color: #2B78E4;
+}
+h1 {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+#header {
+    display: block;
+    width: 1900px;
+    height: 75px;
+    margin: 0 auto;
+    background-color: white;
+}
+#container {
+    width: 1700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+}
+#messagebox {
+    display: block;
+    width: 1675px;
+    height: 75px;
+    margin: 0 auto;
+}
+#commentbox {
+    display: block;
+    width: 1675px;
+    height: 25px;
+    margin: 0 auto;
+}
+#post {
+    font-weight: bold;
+    margin: 0 25px;
+    color: blue
+}
+#comment {
+    color: red;
+    margin: 0 50px;
+}
+#micro {
+    font-size: 11px;
+    margin: 0 50px;
+}
+#commentdetails {
+    margin: 10px 50px 10px 50px;
+}
+#msgbtn {
+    float: right;
+    padding: 5px;
+    margin: 15px;
+    color: white;
+    background-color: #2B78E4;
+    -webkit-box-shadow: 6px 6px 15px -1px #000000; 
+    box-shadow: 6px 6px 15px -1px #000000;
+}
+#cmtbtn {
+    float: right;
+    padding: 5px;
+    margin: 15px;
+    color: white;
+    background-color: #009E0F;
+    -webkit-box-shadow: 6px 6px 15px -1px #000000; 
+    box-shadow: 6px 6px 15px -1px #000000;
+}
+#postdetails {
+    margin-bottom: 10px;
+}
+#top {
+    width: 1685px;
+    height: 175px;
+}
+#cmtheader {
+    margin: 15px 15px 5px 15px;
+}
+#cmtdiv {
+    width: 1685px;
+    height: 105px;
+}
+#name {
+    display: inline-block;
+    float: right;
+    margin: 28px;
+}
+#logout {
+    display: inline-block;
+    float: right;
+    margin: 28px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div id="portal">
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" type="text/css" href="{% static 'wall_app/css/main.css' %}">
+        <title>The Wall</title>
+    </head>
+    <body>
+        <h1>Registration</h1>
+        <form action="/register" method="post">
+            {% csrf_token %}
+            <p class="alrght">First Name:<input class="fields" type="text" name="first_name"></p>
+            <p class="alrght">Last Name:<input class="fields" type="text" name="last_name"></p>
+            <p class="alrght">Email:<input class="fields" type="text" name="email"></p>
+            <p class="alrght">Password:<input class="fields" type="password" name="password"></p>
+            <p class="alrght">Confirm Password:<input class="fields" type="password" name="confirm_password"></p>
+            <input class="btn" type="submit" value="Register"></p>
+        </form>
+        <h1 id="space">Login</h1>
+        <form action="/login" method="post">
+            {% csrf_token %}
+            <p class="alrght">Email:<input class="fields" type="text" name="email"></p>
+            <p class="alrght">Password:<input class="fields" type="password" name="password"></p>
+            <input class="btn" type="submit" value="Login">
+        </form>
+    </div>
+    <div id="errors">
+        {% if messages %}
+            {% for message in messages %}
+                <h3>{{message}}</h3>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
