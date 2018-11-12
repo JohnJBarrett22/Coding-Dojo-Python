@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" type="text/css" href="{% static 'reviewer_app/css/standard.css' %}">
+    <title>Belt Reviewer</title>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="header">
+            <h1>Welcome, {{request.session.u_alias}}!</h1>
+            <a href="/logout"><h4 class="top">Logout</h4></a>
+            <a href="/add"><h4 class="top">Add Book and Review</h4></a>
+        </div>
+        <div id="leftpanel">
+            <h2 class="spacer">Recent Book Reviews:</h2>
+            {% for review in reviews|slice:"0:3" %}
+            <p class="booktitle"><a href="books/{{review.book_reviewed.id}}">{{review.book_reviewed.title}}</a></p>
+            <p>Rating: {{review.rating}}</p>
+            <p><a href="users/{{review.reviewer.id}}">{{review.reviewer.alias}}</a> says: {{review.review}}</p>
+            <p>Posted on {{review.created_at}}</p>
+            {% endfor %}
+        </div>
+        <div id="rightpanel">
+            <h2 class="spacer">Other Books with Reviews:</h2>
+            <div id="scrollbox">
+                {% for review in reviews %}
+                <p id="bookscroll"><a href="books/{{review.book_reviewed.id}}">{{review.book_reviewed.title}}</a></p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

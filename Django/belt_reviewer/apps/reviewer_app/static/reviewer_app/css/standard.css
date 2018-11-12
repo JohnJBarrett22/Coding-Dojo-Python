@@ -1,0 +1,72 @@
+h1 {
+    display: inline-block;
+}
+h2 {
+    margin-left: 25px;
+}
+h3 {
+    margin-left: 50px;
+}
+p {
+    margin-left: 20px;
+}
+a {
+    color: blue;
+}
+#container {
+    width: 1660px;
+    margin: 0 auto;
+    border: 1px solid purple;
+}
+#header {
+    width: 1655px;
+    height: 80px;
+    margin: 0 auto;
+    border: 1px solid green;
+}
+#leftpanel {
+    display: inline-block;
+    vertical-align: top;
+    width: 825px;
+    height: 800px;
+}
+#rightpanel {
+    display: inline-block;
+    width: 825px;
+    height: 800px;
+}
+#scrollbox {
+    float: right;
+    width: 550px;
+    height: 200px;
+    margin-right: 75px;
+    overflow-y: scroll;
+    border: 3px solid black;
+}
+#bookscroll {
+    font-size: 20px;
+}
+.top {
+    display: inline-block;
+    float: right;
+    margin: 30px;
+}
+.booktitle {
+    font-size: 22px;
+    margin-top: 35px;
+}
+.spacer {
+    margin-top: 25px;
+}
+.entry {
+    width: 400px;
+    height: 35px;
+    margin: 2px 35px;
+}
+.btn {
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 35px;
+    padding: 10px;
+}

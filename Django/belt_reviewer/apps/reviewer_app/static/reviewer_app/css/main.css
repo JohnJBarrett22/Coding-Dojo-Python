@@ -1,0 +1,38 @@
+#container {
+    width: 1660px;
+    margin: 0 auto;
+}
+p {
+    font-size:22px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+#registration {
+    display: inline-block;
+    vertical-align: top;
+    width: 815px;
+    height: 415px;
+    margin: 3px 3px;
+    border: 3px solid black;
+}
+#login {
+    display: inline-block;
+    width: 815px;
+    height: 225px;
+    margin: 3px 3px;
+    border: 3px solid black;
+}
+.entry {
+    float: right;
+    width: 400px;
+    height: 35px;
+    margin: 2px 35px;
+}
+.btn {
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 35px;
+    padding: 10px;
+}

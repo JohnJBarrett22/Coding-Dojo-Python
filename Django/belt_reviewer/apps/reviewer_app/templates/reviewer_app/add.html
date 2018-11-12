@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" type="text/css" href="{% static 'reviewer_app/css/standard.css' %}">
+    <title>Belt Reviewer</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="/logout"><h4 class="top">Logout</h4></a>
+            <a href="/books"><h4 class="top">Home</h4></a>
+        </div>
+        <div>
+            <h1>Add a New Book Title and a Review:</h1>
+            <form action="/addbook" method="post">
+                {% csrf_token %}
+                <h2>Book Title:<input class="entry" type="text" name="title"></h2>
+                <h2>Author:</h2>
+                <h3>Choose from the list:<select class="entry" name="preauthor">{% for author in authors %}<option disabled selected value="none"></option><option value="{{author.name}}">{{author.name}}</option>{% endfor %}</select></h3>
+                <h3>Or add a new author:<input class="entry" type="text" name="author"></h3>
+                <h2>Review:<textarea class="entry" name="review" rows="6"></textarea></h2>
+                <h2>Rating:<select name="rating"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>stars.</h2>
+                <input class="btn" type="submit" value="Add Book and Review">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
