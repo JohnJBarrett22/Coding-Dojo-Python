@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'words_app/css/main.css' %}">
+    <title>Session Words</title>
+</head>
+<body>
+    <div id="container">
+        <div id="input">
+            <h1>Add a new word!</h1>
+            <form id="words" name="entry" action="/addword" method="post">
+                {% csrf_token %}
+                <input id="textbox" type="text" name="word">
+                <h2>Choose color!</h2>
+                <input type="hidden" name="color" value="null" checked>
+                <div class="buttons"><input type="radio" name="color" value="red">  Red</div>
+                <div class="buttons"><input type="radio" name="color" value="blue">  Green</div>
+                <div class="buttons"><input type="radio" name="color" value="green">  Blue</div>
+                <div id="gap"><input type="checkbox" name="bigfont" value="big">Show in BIG fonts!</div>
+                <input class="button" type="submit" action="/addword" method="post" value="Add to Session">
+            </form>
+            {% if messages %}
+                {% for message in messages %}
+                    <p id="error">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div id="output">
+            <div id="solo"><a href="/clear"><button class="button date">Clear Session</button></a></div>
+            {% for word in request.session.words %}
+                <p><span class='{{word.color}} {{word.font}}'>{{word.word}}</span><span class='date'> - added on {{word.time}}</span></p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

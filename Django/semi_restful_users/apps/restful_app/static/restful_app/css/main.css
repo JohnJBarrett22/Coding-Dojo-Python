@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+}
+h1 {
+    font-size: 72px;
+    margin: 10px;
+}
+h2 {
+    margin-left: 20px;
+}
+h3 {
+    margin-left: 20px;
+}
+a {
+    display: inline-block;
+    color: blue;
+}
+#container {
+    width: 1600px;
+    height: 800px;
+    margin: 50px auto;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+#display {
+    width: 1400px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: white;
+}
+#button {
+    background-color: skyblue;
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+}
+#big {
+    font-size: 78px;
+}
+.input {
+    display: block;
+    width: 500px;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
