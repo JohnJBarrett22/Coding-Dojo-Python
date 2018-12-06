@@ -1,6 +1,6 @@
 # Time Display
 
-##Objectives:
+## Objectives:
 * Practice setting up a Django project
 * Familiarity with passing data to a template
 
