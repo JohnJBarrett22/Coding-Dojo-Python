@@ -33,7 +33,5 @@ But how do we keep track of them once they've logged in? I think you might alrea
 
 Once we have already identified the places on our site that we wish to be dynamic for users that are logged in, then we just need to check to see if that session variable has been set and display the content accordingly.
 
-Helpful Video on Session
-
 ### BONUS:
 Add more fields to your registration form with different form elements. For example, include a drop down menu, radio buttons, checkboxes, and a datepicker. Include validations for each field. Have users provide their birthday, and require that they must be at least ten years old in order to register. Level up your password validations by requiring at least one capital letter and one number. Provide the user with several programming languages, and require that they check at least one as an interest of theirs. Customize this assignment and get creative!
