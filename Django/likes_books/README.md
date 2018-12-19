@@ -8,14 +8,14 @@ Now, if you were to have the shell execute: Book.objects.first.users, what would
 
 To avoid any confusion in situations like this, particularly where you have two tables with more than one relationships, you could create a diagram like below specifying the relationship.
 
-According to this:
+### According to this:
 
 * A record in the books table that is connected to the users record through uploaded_by_id will call its user: uploader (e.g. Book.objects.first().uploader)
 * A record in the users table that is connected to the books table through uploaded_by_id will call its book: uploaded_books (e.g. User.objects.first().uploaded_books)
 * A record in the books table that is connected to the users record through the many to many table (likes table) will call its users: liked_users (e.g. Book.objects.first().liked_users)
 * A record in the users table that is connected to the books table through the many to many table (likes table) will call its books: liked_books (e.g. User.objects.first().liked_books)
 
-For your assignment:
+### For your assignment:
 
 * Create the appropriate models and the appropriate relationship.  Design your models so that the following command would be supported
 * Book.objects.first().uploader - this should return the user who uploaded the book
