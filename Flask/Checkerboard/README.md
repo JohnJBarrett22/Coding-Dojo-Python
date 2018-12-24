@@ -8,7 +8,7 @@
 
 Write a program that generates an HTML page that looks like a checkerboard.  For this assignment, you're allowed to use table if you want.  You could use div if desired.
 
-Note: During Web Fundamentals, we discouraged you from using table as we didn't want you to use <table> to position different contents of your website on different parts of the table.  For this assignment however, you are allowed to use table.
+Note: During Web Fundamentals, we discouraged you from using table as we didn't want you to use table to position different contents of your website on different parts of the table.  For this assignment however, you are allowed to use table.
 
 Your program should have the following output:
 
