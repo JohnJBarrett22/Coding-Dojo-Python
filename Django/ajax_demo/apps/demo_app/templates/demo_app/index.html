@@ -28,6 +28,16 @@
     </form>
     <div id="placeholder2" class="formField">Placeholder for Ajax content</div>
 
+    <h1>Demo 3</h1>
+    <form id="create_user_ajax_form" class="ajax_form" action='/demo_app/create' method="post">
+        {% csrf_token %}
+        First Name: <input type="text" name="first_name">
+        Last Name: <input type="text" name="last_name">
+        Email Address: <input type="text" name="email_address">
+        <input type='submit' value="Submit">
+    </form>
+    <div id="placeholder3" class="formField">Placeholder for Ajax content</div>
+
     <script>
         $('#button_json').click(function () {
             console.log("button_json is clicked!")
@@ -61,6 +71,20 @@
                 }
             })
         });
+        $('#create_user_ajax_form').submit(function (e) {
+            e.preventDefault()
+            console.log("Came Here!")
+            $.ajax({
+                url: '/create',
+                method: 'post',
+                data: $(this).serialize(),
+                success: function (serverResponse) {
+                    console.log('Success!', serverResponse)
+                    $('#placeholder3').html(serverResponse)
+                }
+            })
+        })
+
 
 
     </script>
