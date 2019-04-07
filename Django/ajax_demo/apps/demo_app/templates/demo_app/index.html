@@ -16,10 +16,35 @@
 
 <body>
     <h1>Demo 1</h1>
-    <button class="btn btn-primary">Fetch HttpResponse from user_login.json</button>
-    <button class="btn btn-primary">Fetch HttpResponse from user_login.html</button>
-    <div class="formField">Placeholder for Ajax content</div>
+    <button id="button_json" class="btn btn-primary">Fetch HttpResponse from user_login.json</button>
+    <button id="button_html" class="btn btn-primary">Fetch HttpResponse from user_login.html</button>
+    <div id="placeholder1" class="formField">Placeholder for Ajax content</div>
 
+
+
+    <script>
+        $('#button_json').click(function () {
+            console.log("button_json is clicked!")
+            $.ajax({
+                url: '/all.json',
+                success: function (serverResponse) {
+                    console.log('Success!', serverResponse)
+                    $('#placeholder1').html(JSON.stringify(serverResponse))
+                }
+            })
+        });
+        $('#button_html').click(function () {
+            console.log("button_html is clicked!")
+            $.ajax({
+                url: '/all.html',
+                success: function (serverResponse) {
+                    console.log('Success!', serverResponse)
+                    $('#placeholder1').html(serverResponse)
+                }
+            })
+        });
+
+    </script>
 </body>
 
 </html>
