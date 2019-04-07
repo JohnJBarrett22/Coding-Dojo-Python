@@ -1,4 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
+from django.contrib import messages
+# from models import *
 
 def index(request):
-    return HttpResponse("Hello World!")
+    return render(request, "demo_app/index.html")
