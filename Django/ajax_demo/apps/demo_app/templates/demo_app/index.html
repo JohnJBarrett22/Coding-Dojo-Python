@@ -20,7 +20,13 @@
     <button id="button_html" class="btn btn-primary">Fetch HttpResponse from user_login.html</button>
     <div id="placeholder1" class="formField">Placeholder for Ajax content</div>
 
-
+    <h1>Demo 2</h1>
+    <form action='/demo_app/find' method="post">
+        {% csrf_token %}
+        Find all users whose first name starts with:
+        <input id="ajax_first_name" type="text" name="first_name_starts_with">
+    </form>
+    <div id="placeholder2" class="formField">Placeholder for Ajax content</div>
 
     <script>
         $('#button_json').click(function () {
@@ -43,6 +49,19 @@
                 }
             })
         });
+        $('#ajax_first_name').keyup(function () {
+            console.log('Up!')
+            $.ajax({
+                url: '/find',
+                method: 'post',
+                data: $(this).parent().serialize(),
+                success: function (serverResponse) {
+                    console.log('Success!', serverResponse)
+                    $('#placeholder2').html(serverResponse)
+                }
+            })
+        });
+
 
     </script>
 </body>
